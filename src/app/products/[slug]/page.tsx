@@ -7,6 +7,14 @@ type Props = {
   };
 };
 
+//제품별로 동적인 메타데이터 만들기
+export function generateMetadata({ params }: Props) {
+  //어떤 경로에 있는지 표시해줘야하니 params받기
+  return {
+    title: `이름 ${params.slug}`,
+  };
+}
+
 const page = ({ params }: Props) => {
   // 넥스트는 props에 params를 사용해서slug에 어떤 경로가 왔는지 알려줌
   return (
