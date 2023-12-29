@@ -1,9 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import os from "os"; //node api중 하나
+import { getProducts } from "./../../api/products";
 
-const page = () => {
-  const products = ["shirt", "pants"];
+const page = async () => {
+  //const products = ["shirt", "pants"]; //리팩토링 -> 서버 파일에 있는 리스트 읽어오기
+
+  //promise를 할당해주니까 에러가 나는 것.await해주기
+  const products = await getProducts();
+
   console.log("서버 컴포넌트 테스트");
   //웹 콘솔에는 안찍히고 vscode터미널에만 찍힘
   //서버컴포넌트는 서버에서 실행이 됨
@@ -16,10 +21,10 @@ const page = () => {
     <>
       <h1>제품 페이지</h1>
       <ul>
-        {products.map((product, index) => {
+        {products.map(({ id, name }, index) => {
           return (
             <li key={index}>
-              <Link href={`/products/${product}`}>{product}</Link>
+              <Link href={`/products/${id}`}>{name}</Link>
             </li>
           );
         })}

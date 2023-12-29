@@ -26,10 +26,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>./layout 에서 지정한 헤더입니당</header>
+        <header>
+          <h2>
+            ./layout 에서 지정한 헤더입니당 <hr />
+          </h2>
+        </header>
         <nav>
-          ./layout 에서 지정한 냅바입니당
-          <Link href="/products">Products </Link>
+          <h3>
+            ./layout 에서 지정한 냅바입니당
+            <hr />
+          </h3>
+          <Link href="/products">Products로 이동하기 </Link> <hr />
         </nav>
         {children}
       </body>
