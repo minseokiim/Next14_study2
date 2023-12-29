@@ -1,6 +1,8 @@
 import { getProduct, getProducts } from "@/api/products";
 import React from "react";
 
+export const revalidate = 3; //ISR, 3초마다
+
 type Props = {
   params: {
     slug: string; //우리가 키워드를 slug로 했으니까!

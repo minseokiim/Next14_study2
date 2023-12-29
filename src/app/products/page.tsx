@@ -3,6 +3,8 @@ import Link from "next/link";
 import os from "os"; //node api중 하나
 import { getProducts } from "./../../api/products";
 
+export const revalidate = 3; //ISR, 3초마다
+
 const page = async () => {
   //const products = ["shirt", "pants"]; //리팩토링 -> 서버 파일에 있는 리스트 읽어오기
 
