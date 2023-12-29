@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import os from "os"; //node api중 하나
-import { getProducts } from "./../../api/products";
+import { getProducts } from "../../api/product";
 import Meow from "../components/Meow";
 
 //export const revalidate = 3; //이걸 주석하면 아무리 새로고침해도 안바뀜-> fetch에서 시간 설정 가능
@@ -26,7 +26,7 @@ const page = async () => {
           );
         })}
       </ul>
-      <Meow/>
+      <Meow />
     </>
   );
 };

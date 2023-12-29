@@ -1,4 +1,4 @@
-import { getProduct, getProducts } from "@/api/products";
+import { getProduct, getProducts } from "@/api/product";
 import React from "react";
 
 export const revalidate = 3; //ISR, 3초마다
