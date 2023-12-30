@@ -1,6 +1,8 @@
 import { getProduct, getProducts } from "@/api/product";
 import React from "react";
 import Image from "next/image";
+import { redirect } from "next/navigation";
+import BackButton from "@/app/components/BackButton";
 
 export const revalidate = 3; //ISR, 3초마다
 
@@ -21,6 +23,10 @@ export function generateMetadata({ params }: Props) {
 const page = async ({ params: { slug } }: Props) => {
   const product = await getProduct(slug);
 
+  if (!product) {
+    redirect("/products");
+  }
+
   return (
     <div>
       slug를 적용했어용
@@ -32,6 +38,7 @@ const page = async ({ params: { slug } }: Props) => {
         width="400"
         height="300"
       />
+      <BackButton />
     </div>
   );
 };
