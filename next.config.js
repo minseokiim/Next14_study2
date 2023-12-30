@@ -9,6 +9,32 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/products/deleted_forever", //여기로 오면
+        destination: "/products", //여기로
+        permanent: true, //영원히
+      },
+      {
+        source: "/products/deleted_temp",
+        destination: "/products",
+        permanent: false, //일시적으로
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/minseo",
+        destination: "/about/me",
+      },
+      {
+        source: "/items/:slug",
+        destination: "/products/:slug",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
