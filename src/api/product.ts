@@ -5,6 +5,7 @@ export type Product = {
   id: string;
   name: string;
   price: number;
+  image: string;
 };
 
 // 함수 추출 장점 : 유닛테스트 할 때도 편함

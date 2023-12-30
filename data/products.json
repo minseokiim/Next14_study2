@@ -2,21 +2,25 @@
   {
     "id": "1012",
     "name": "바지1",
-    "price": 45000
+    "price": 45000,
+    "image": "image1.png"
   },
   {
     "id": "1030",
-    "name": "치마130",
-    "price": 35000
+    "name": "치마 업데이트 확인",
+    "price": 35000,
+    "image": "image2.png"
   },
   {
     "id": "1022",
     "name": "바지2",
-    "price": 45000
+    "price": 45000,
+    "image": "image3.png"
   },
   {
     "id": "1040",
     "name": "치마2",
-    "price": 35000
+    "price": 35000,
+    "image": "image4.png"
   }
 ]

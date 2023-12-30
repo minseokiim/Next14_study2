@@ -1,5 +1,6 @@
 import { getProduct, getProducts } from "@/api/product";
 import React from "react";
+import Image from "next/image";
 
 export const revalidate = 3; //ISR, 3초마다
 
@@ -24,7 +25,13 @@ const page = async ({ params: { slug } }: Props) => {
     <div>
       slug를 적용했어용
       <br />
-      경로는 {product?.name} 입니당
+      <div>경로는 {product?.name} 입니당</div>
+      <Image
+        src={`/images/${product?.image}`}
+        alt="이미지"
+        width="400"
+        height="300"
+      />
     </div>
   );
 };
