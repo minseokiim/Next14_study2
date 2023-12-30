@@ -7,6 +7,8 @@ import Meow from "../components/Meow";
 //export const revalidate = 3; //이걸 주석하면 아무리 새로고침해도 안바뀜-> fetch에서 시간 설정 가능
 
 const page = async () => {
+  // throw new Error();  //에러 컴포넌트 테스트용
+
   const products = await getProducts();
 
   console.log("서버 컴포넌트 테스트");
